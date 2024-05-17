@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Mouse-Memoirs";
+  font-style: normal;
+  src: local("MouseMemoirs"), url(src/assets/fonts/MouseMemoirs-Regular.ttf) format("truetype");
+}
+@layer utilities {
+  @variants responsive {
+    .text-heading-s {
+      font-size: 32px;
+    }
+    .text-heading-m {
+      font-size: 48px;
+    }
+    .text-heading-l {
+      font-size: 88px;
+    }
+    .text-heading-xl {
+      font-size: 136px;
+    }
+
+    .text-body {
+      font-size: 26px;
+    }
+  }
+}
+html {
+  font-family: "Mouse-Memoirs", serif;
+}
+
+/* Rectangle 7 */
+.main-menu-background {
+  position: absolute;
+  width: 324px;
+  height: 481px;
+  left: calc(50% - 162px - 0.5px);
+  top: calc(50% - 240.5px + 40.5px);
+  background: linear-gradient(180deg, #344ABA 0%, rgba(0, 20, 121, 0.83) 100%);
+  box-shadow: inset 0px -8px 0px 4px #140E66, inset 0px 6px 0px 8px #2463FF;
+  border-radius: 48px;
+}
+
+.main-menu-button {
+  /* Rectangle 8 */
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
+  box-shadow: inset 0px -4px 0px 5px #243041, inset 0px -12px 0px 11px #9D2DF5;
+  border-radius: 999px;
+}
+
+.main-menu-how-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 64px;
+  gap: 8px;
+  width: 260px;
+  height: 62px;
+  /* Blue */
+  background: #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 40px;
+}
+
+/*# sourceMappingURL=main.css.map */
