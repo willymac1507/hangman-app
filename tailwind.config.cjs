@@ -13,6 +13,7 @@ module.exports = {
                 brand: {
                     navy: '#261676',
                     blue: '#2643ff',
+                    lilac: '#887dc0'
                 },
             }
         }

@@ -8,6 +8,9 @@
 }
 @layer utilities {
   @variants responsive {
+    .text-heading-xs {
+      font-size: 24px;
+    }
     .text-heading-s {
       font-size: 32px;
     }
@@ -24,13 +27,22 @@
     .text-body {
       font-size: 26px;
     }
+
+    .text-help {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.05em;
+    }
   }
 }
 html {
   font-family: "Mouse-Memoirs", serif;
 }
 
-/* Rectangle 7 */
+.page-container {
+  @apply w-screen h-screen bg-mobile bg-cover px-6 py-10;
+}
+
 .main-menu-background {
   position: absolute;
   width: 324px;
@@ -41,9 +53,7 @@ html {
   box-shadow: inset 0px -8px 0px 4px #140E66, inset 0px 6px 0px 8px #2463FF;
   border-radius: 48px;
 }
-
 .main-menu-button {
-  /* Rectangle 8 */
   box-sizing: border-box;
   width: 160px;
   height: 160px;
@@ -51,7 +61,6 @@ html {
   box-shadow: inset 0px -4px 0px 5px #243041, inset 0px -12px 0px 11px #9D2DF5;
   border-radius: 999px;
 }
-
 .main-menu-how-button {
   display: flex;
   flex-direction: row;
@@ -61,10 +70,23 @@ html {
   gap: 8px;
   width: 260px;
   height: 62px;
-  /* Blue */
   background: #2463FF;
   box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
   border-radius: 40px;
+}
+
+.mini-button {
+  @apply flex justify-center items-center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
+  box-shadow: inset 0px -5px 0px -1px rgba(157, 45, 245, 0.25);
+  border-radius: 999px;
+}
+
+.text-container {
+  @apply bg-white rounded-3xl p-7;
 }
 
 /*# sourceMappingURL=main.css.map */
