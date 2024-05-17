@@ -102,6 +102,11 @@ html {
   order: 0;
   flex-grow: 0;
 }
+.category-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 40px;
+}
 
 .text-container {
   @apply bg-white rounded-3xl p-7;
