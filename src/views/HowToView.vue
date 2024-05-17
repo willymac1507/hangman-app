@@ -1,17 +1,11 @@
 <script setup>
-import { useRouter } from 'vue-router';
-import HelpBox from '@/views/HelpBox.vue';
-
-const router = useRouter();
-</script>
+import HelpBox from '@/components/HelpBox.vue';
+import Navbar from '@/components/NavBar.vue';</script>
 <template>
   <div class="page-container">
-    <div class="flex justify-between w-full">
-      <button class="mini-button" @click="() => { router.push('/') }">
-        <img alt="" src="@/assets/images/icon-back.svg" width="17.45px">
-      </button>
+    <Navbar icon="back" route="/">
       <img alt="" src="@/assets/images/how-to-play.svg">
-    </div>
+    </Navbar>
     <div class="flex flex-col gap-6 mt-20">
       <HelpBox>
         <template #number>01</template>

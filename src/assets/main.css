@@ -85,6 +85,24 @@ html {
   border-radius: 999px;
 }
 
+.category-button {
+  @apply text-white uppercase text-heading-xs;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 64px;
+  gap: 8px;
+  width: 324px;
+  height: 77px;
+  background: #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .text-container {
   @apply bg-white rounded-3xl p-7;
 }
