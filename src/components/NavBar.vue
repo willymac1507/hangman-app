@@ -8,10 +8,10 @@ const props = defineProps([
 ]);
 </script>
 <template>
-  <div class="flex justify-between w-full">
-    <button class="mini-button" @click="() => { router.push(props.route) }">
+  <div class="flex justify-between items-center w-full">
+    <RouterLink :to="props.route" class="mini-button">
       <img :src="'/src/assets/images/icon-' + props.icon + '.svg'" alt="" width="17.45px">
-    </button>
+    </RouterLink>
     <slot></slot>
   </div>
 </template>

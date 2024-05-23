@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Mouse-Memoirs";
-  font-style: normal;
-  src: local("MouseMemoirs"), url(src/assets/fonts/MouseMemoirs-Regular.ttf) format("truetype");
-}
 @layer utilities {
   @variants responsive {
     .text-heading-xs {
@@ -35,8 +30,8 @@
     }
   }
 }
-html {
-  font-family: "Mouse-Memoirs", serif;
+body {
+  font-family: "Mouse Memoirs", sans-serif;
 }
 
 .page-container {
@@ -61,6 +56,9 @@ html {
   box-shadow: inset 0px -4px 0px 5px #243041, inset 0px -12px 0px 11px #9D2DF5;
   border-radius: 999px;
 }
+.main-menu-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
+}
 .main-menu-how-button {
   display: flex;
   flex-direction: row;
@@ -74,6 +72,11 @@ html {
   box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
   border-radius: 40px;
 }
+.main-menu-how-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 40px;
+}
 
 .mini-button {
   @apply flex justify-center items-center;
@@ -83,6 +86,9 @@ html {
   background: linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
   box-shadow: inset 0px -5px 0px -1px rgba(157, 45, 245, 0.25);
   border-radius: 999px;
+}
+.mini-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
 }
 
 .category-button {
@@ -97,19 +103,64 @@ html {
   height: 77px;
   background: #2463FF;
   box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
-  border-radius: 20px;
+  border-radius: 25px 25px 28px 28px;
   flex: none;
   order: 0;
   flex-grow: 0;
 }
 .category-button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #2463FF;
-  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
-  border-radius: 40px;
 }
 
 .text-container {
   @apply bg-white rounded-3xl p-7;
+}
+
+.letter-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px;
+  gap: 8px;
+  width: 40px;
+  height: 66px;
+  background: #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 12px;
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.letter-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #2463FF;
+}
+.letter-button:disabled {
+  opacity: 0.25;
+  @apply text-transparent;
+}
+
+.alphabet-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 32px;
+  width: 27px;
+  height: 56px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  flex: none;
+  order: 7;
+  align-self: stretch;
+}
+.alphabet-button:hover {
+  @apply bg-brand-blue text-white;
+}
+.alphabet-button:disabled {
+  @apply text-brand-navy bg-gray-600;
 }
 
 /*# sourceMappingURL=main.css.map */

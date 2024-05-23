@@ -12,7 +12,7 @@ module.exports = {
             colors: {
                 brand: {
                     navy: '#261676',
-                    blue: '#2643ff',
+                    blue: '#2463ff',
                     lilac: '#887dc0'
                 },
             }
