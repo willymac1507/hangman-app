@@ -133,10 +133,7 @@ body {
   order: 3;
   flex-grow: 0;
 }
-.letter-button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #2463FF;
-}
-.letter-button:disabled {
+.letter-button.disabled {
   opacity: 0.25;
   @apply text-transparent;
 }
@@ -156,11 +153,63 @@ body {
   order: 7;
   align-self: stretch;
 }
-.alphabet-button:hover {
-  @apply bg-brand-blue text-white;
-}
 .alphabet-button:disabled {
   @apply text-brand-navy bg-gray-600;
+}
+.alphabet-button:hover:not([disabled]) {
+  @apply bg-brand-blue text-white;
+}
+
+.pause-overlay {
+  position: absolute;
+  width: 324px;
+  height: 497px;
+  left: calc(50% - 162px + 0.5px);
+  top: calc(50% - 248.5px + 0.5px);
+  background: linear-gradient(180deg, #344ABA 0%, rgba(0, 20, 121, 0.83) 100%);
+  box-shadow: inset 0px -8px 0px 4px #140E66, inset 0px 6px 0px 8px #2463FF;
+  border-radius: 48px;
+}
+
+.screen-overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 80px);
+  left: 0;
+  top: 80px;
+}
+
+.options-button {
+  /* Frame 26 */
+  /* Auto layout */
+  display: flex;
+  flex-basis: content;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 64px;
+  gap: 8px;
+  height: 62px;
+  /* Blue */
+  background: #2463FF;
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #3C74FF;
+  border-radius: 40px;
+}
+
+.quit-button {
+  /* Frame 26 */
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 64px;
+  gap: 8px;
+  height: 62px;
+  /* Pink Gradient */
+  background: linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
+  box-shadow: inset 0px -2px 0px 3px #140E66, inset 0px 1px 0px 6px #C642FB;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
